@@ -1,0 +1,28 @@
+@{
+    var grid = Html.DevExpress().GridView(settings => {
+        settings.Name = "GridView";
+        settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
+
+        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Home", Action = "AddNew" };
+
+        settings.KeyFieldName = "ID";
+
+        settings.SettingsPager.Visible = false;
+        settings.Settings.ShowGroupPanel = false;
+        settings.Settings.ShowFilterRow = false;
+        settings.SettingsBehavior.AllowSelectByRowClick = false;
+        settings.SettingsBehavior.AllowFocusedRow = true;
+
+        settings.CommandColumn.Visible = true;
+        settings.CommandColumn.ShowNewButton = true;
+        
+        settings.Columns.Add("ID");
+        settings.Columns.Add("Text");
+
+        settings.BeforeGetCallbackResult = (s, e) => {
+            var gridView = s as MVCxGridView;
+            gridView.FocusedRowIndex = gridView.FindVisibleIndexByKeyValue(ViewData["newKey"]);
+        };
+    });
+}
+@grid.Bind(Model).GetHtml()
