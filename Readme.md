@@ -43,7 +43,7 @@ public ActionResult AddNew(Entry e) {
 ## Files to Review
 
 * [HomeController.cs](./CS/E4787/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/E4787/Controllers/HomeController.vb))
-* [GridViewPartial.cshtml](./CS/E4787/Views/Home/_GridViewPartial.cshtml) (VB: [GridViewPartial.vbhtml](./VB/E4787/Views/Home/_GridViewPartial.vbhtml))
+* [GridViewPartial.cshtml](./CS/E4787/Views/Home/_GridViewPartial.cshtml)
 
 ## More Examples
 
