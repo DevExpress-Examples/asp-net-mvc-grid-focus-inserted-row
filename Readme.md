@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # Grid View for ASP.NET MVC - How to focus the newly inserted row
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e4787/)**
+**[[Run Online]](https://codecentral.devexpress.com/128550086/)**
 <!-- run online end -->
 
 This example demonstrates how to use the grid's AddNewRowRouteValues property to focus the newly inserted row.
